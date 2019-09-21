@@ -12,6 +12,7 @@ body {
     font-family: '맑은 고딕' 돋움;
     font-size:1.3em; 
     color:#333;
+    background-image: url("resources/images/city-image1920.jpg");
 }
 table {
 	margin-left: auto;
@@ -28,13 +29,15 @@ th {
 }
 td {
 	color: purple;
+	text-align: center;
 }
 tr:hover {
 	backgroiund-color: yellow;
 	font-weight: bold;
 }
-td:nth-child(3) { 
-	width: 300px;
+td:nth-child(2) { 
+	width: 400px;
+	text-align: left;
 }
 a {
 	color: purple;
@@ -42,14 +45,19 @@ a {
 }
 input {
 	margin: 5px;
+	font-weight: bold;
 }
 select {
 	height: 25px; 
+	font-weight: bold;
 } 
+#t_title {
+	color: #ff8a2be2;
+}
 </style>
 </head>
 <body><div id="view_div">
-<h1>뉴스 게시판</h1>
+<h1 id="t_title">뉴스 게시판</h1>
 <c:if test='${!empty list}'>
 <table>
 	<tr>
@@ -93,7 +101,7 @@ select {
 <input type="submit" value="뉴스작성" onclick="writeNews()">
 
 <div id="write" style="display:none">
-	<h2>뉴스 작성</h2>
+	<h2 id="t_title">뉴스 작성</h2>
 	<form method="POST" action="/springnews/news">
 		<input type="hidden" name="action" value="insert">
 		<input required type="text" id="m_writer" name="writer"  placeholder="작성자명을 입력해주세요">
@@ -110,7 +118,7 @@ select {
 
 <c:if test='${!empty vo }'>
 <div id="select">
-	<h2>뉴스 내용</h2>
+	<h2 id="t_title">뉴스 내용</h2>
 	<form method="POST" action="/springnews/news">
 		<input type="hidden" name="action" value='${vo.id}'>
 		<br>
