@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # Spring MVC - Based Board
 
 ## Index
@@ -37,12 +43,12 @@
 
 ## Screen Configuration
 
-- 메인 페이지 & 게시글 출력![select](./images/board_select.PNG)
+- 메인 페이지 & 게시글 출력![select](./images/board_select.png)
 
   ---
 
-- 게시글 업로드 & 수정![insert](./images/board_insert.PNG)
+- 게시글 업로드 & 수정![insert](./images/board_insert.png)
 
   ---
 
-- 게시글 삭제![delete](./images/board_delete.PNG)
+- 게시글 삭제![delete](./images/board_delete.png)
